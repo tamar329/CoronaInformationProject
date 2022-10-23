@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>The HMO's COVID management system</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>The HMO's COVID management system</h1>
+    <h2>Member details</h2>
+
+    <form action="#" th:object="${member}" method=get>
+    <!-- Add hidden form field to handle update -->
+        <a type="text" th:text="*{id}" placeholder="ID Number" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{firstName}"  placeholder="First Name" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{lastName}" placeholder="City" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{city}" placeholder="Last Name" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{street}" placeholder="Street" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{numberHouse}" placeholder="Number Of House" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{birthDate}" placeholder="Date Of Birth" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{phone}" placeholder="Phone" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{mobilePhone}" placeholder="Mobile Phone" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{positiveResultDate}" placeholder="Date of positive result" class="form-control mb-4 col-4"></a>
+
+        <a type="text" th:text="*{recoveryDate}" placeholder="Recovery date" class="form-control mb-4 col-4"></a>
+
+        <h6>First Vaccination</h6>
+
+        <a type="text" th:field="*{firstVaccinationDate}" placeholder="Date of first vaccination" class="form-control mb-4 col-4"/>
+
+        <a type="text" th:field="*{firstManufacturer}" placeholder="Manufacturer of first vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Second Vaccination</h6>
+
+        <a type="text" th:field="*{secondVaccinationDate}" placeholder="Date of second vaccination" class="form-control mb-4 col-4"/>
+
+        <a type="text" th:field="*{secondManufacturer}" placeholder="Manufacturer of second vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Third Vaccination</h6>
+
+        <a type="text" th:field="*{thirdVaccinationDate}" placeholder="Date of third vaccination" class="form-control mb-4 col-4"/>
+
+        <a type="text" th:field="*{thirdManufacturer}" placeholder="Manufacturer of third vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Fourth Vaccination</h6>
+
+        <a type="text" th:field="*{fourthVaccinationDate}" placeholder="Date of fourth vaccination" class="form-control mb-4 col-4"/>
+
+        <a type="text" th:field="*{fourthManufacturer}" placeholder="Manufacturer of fourth vaccination" class="form-control mb-4 col-4"/>
+
+    </form>
+
+    <a th:href="@{/}"> Back to Member List</a>
+</div>
+</body>
+
+</html>

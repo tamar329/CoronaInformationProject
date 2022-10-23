@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>The HMO's COVID management system</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>The HMO's COVID management system</h1>
+    <hr>
+    <h2>Update Mamber</h2>
+
+    <form action="#" th:action="@{/saveUpdateMember}" th:object="${member}" method="POST">
+
+        <!-- Add hidden form field to handle update -->
+
+        <h5>Personal Information</h5>
+
+        <input type="hidden" th:field="*{id}" />
+
+        <input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{city}" placeholder="City" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{street}" placeholder="Street" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{numberHouse}" placeholder="Number Of house" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{birthDate}" placeholder="Date of birth" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{phone}" placeholder="Phone" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{mobilePhone}" placeholder="Mobile phone" class="form-control mb-4 col-4">
+
+        <h5>Details about the corona virus</h5>
+
+        <input type="text" th:field="*{positiveResultDate}" placeholder="Date of positive result" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{recoveryDate}" placeholder="Recovery date" class="form-control mb-4 col-4">
+
+        <h6>First Vaccination</h6>
+
+        <input type="text" th:field="*{firstVaccinationDate}" placeholder="Date of first vaccination" class="form-control mb-4 col-4"/>
+
+        <input type="text" th:field="*{firstManufacturer}" placeholder="Manufacturer of first vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Second Vaccination</h6>
+
+        <input type="text" th:field="*{secondVaccinationDate}" placeholder="Date of second vaccination" class="form-control mb-4 col-4"/>
+
+        <input type="text" th:field="*{secondManufacturer}" placeholder="Manufacturer of second vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Third Vaccination</h6>
+
+        <input type="text" th:field="*{thirdVaccinationDate}" placeholder="Date of third vaccination" class="form-control mb-4 col-4"/>
+
+        <input type="text" th:field="*{thirdManufacturer}" placeholder="Manufacturer of third vaccination" class="form-control mb-4 col-4"/>
+
+        <h6>Fourth Vaccination</h6>
+
+        <input type="text" th:field="*{fourthVaccinationDate}" placeholder="Date of fourth vaccination" class="form-control mb-4 col-4"/>
+
+        <input type="text" th:field="*{fourthManufacturer}" placeholder="Manufacturer of fourth vaccination" class="form-control mb-4 col-4"/>
+
+        <button type="submit" class="btn btn-info col-2"> Update Member</button>
+    </form>
+
+    <a th:href="@{/}"> Back to Member List</a>
+</div>
+</body>
+
+</html>
